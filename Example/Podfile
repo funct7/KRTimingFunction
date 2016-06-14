@@ -1,0 +1,6 @@
+use_frameworks!
+target 'KRTimingFunction_Tests' do
+  pod 'KRTimingFunction', :path => '../'
+  
+  
+end
