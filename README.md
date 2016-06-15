@@ -17,12 +17,12 @@ KRTimingFunction is available through [CocoaPods](http://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "KRTimingFunction"
+pod 'KRTimingFunction', :git => 'https://github.com/BridgeTheGap/KRTimingFunction.git'
 ```
 
 ## Author
 
-Joshua Park, wmpark@knowre.com
+Josh Woomin Park, wmpark@knowre.com
 
 ## License
 
