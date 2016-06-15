@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import KRTimingFunction
+@testable import KRTimingFunction
 
 class Tests: XCTestCase {
     
@@ -15,8 +15,54 @@ class Tests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        let date = NSDate()
+        for i in 0 ..< 10 {
+            let param = (12.0+Double(i), 73.0+Double(i), 0.0, 1.0)
+            let functions: [TimingFunction] = [
+                //        .Linear(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInQuad(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutQuad(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutQuad(rt: param.0 / param.1, b: param.2, c: param.3),
+                
+                .EaseInCubic(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutCubic(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutCubic(rt: param.0 / param.1, b: param.2, c: param.3),
+                
+                .EaseInQuart(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutQuart(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutQuart(rt: param.0 / param.1, b: param.2, c: param.3),
+                // Quint
+                .EaseInQuint(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutQuint(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutQuint(rt: param.0 / param.1, b: param.2, c: param.3),
+                // Sine
+                .EaseInSine(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutSine(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutSine(rt: param.0 / param.1, b: param.2, c: param.3),
+                // Expo
+                .EaseInExpo(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutExpo(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutExpo(rt: param.0 / param.1, b: param.2, c: param.3),
+                // Circ
+                .EaseInCirc(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutCirc(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutCirc(rt: param.0 / param.1, b: param.2, c: param.3),
+                // Elastic
+                .EaseInElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
+                .EaseOutElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
+                .EaseInOutElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
+                // Back
+                .EaseInBack(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutBack(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutBack(rt: param.0 / param.1, b: param.2, c: param.3),
+                // Bounce
+                .EaseInBounce(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseOutBounce(rt: param.0 / param.1, b: param.2, c: param.3),
+                .EaseInOutBounce(rt: param.0 / param.1, b: param.2, c: param.3),
+                ]
+            TimingFunction.evaluate(f)
+        }
+        print(NSDate().timeIntervalSinceDate(date))
     }
     
     func testPerformanceExample() {
