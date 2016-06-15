@@ -1,0 +1,14 @@
+PODS:
+  - KRTimingFunction (0.1.0)
+
+DEPENDENCIES:
+  - KRTimingFunction (from `../`)
+
+EXTERNAL SOURCES:
+  KRTimingFunction:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KRTimingFunction: 82def1e3036fb2d90bd3e3cf542dd43cb34dbc3a
+
+COCOAPODS: 0.39.0
