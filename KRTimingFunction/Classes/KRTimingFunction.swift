@@ -28,7 +28,7 @@ private func /= (inout lhs: Double, rhs: Double) -> Double {
     return lhs
 }
 
-enum TimingFunction {
+public enum TimingFunction {
     case Linear(rt: Double, b: Double, c: Double)
     // Quad
     case EaseInQuad(rt: Double, b: Double, c: Double)
@@ -71,7 +71,7 @@ enum TimingFunction {
     case EaseOutBounce(rt: Double, b: Double, c: Double)
     case EaseInOutBounce(rt: Double, b: Double, c: Double)
     
-    static func evaluate(f: TimingFunction) -> Double {
+    public static func evaluate(f: TimingFunction) -> Double {
         switch f {
             
             // Linear
