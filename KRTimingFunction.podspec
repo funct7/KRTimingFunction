@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KRTimingFunction'
-  s.version          = '0.2.2'
-  s.summary          = 'Swift version of JQuery timing function'
+  s.version          = '0.9.1'
+  s.summary          = 'A Swift timing function ported from JQuery timing function'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
