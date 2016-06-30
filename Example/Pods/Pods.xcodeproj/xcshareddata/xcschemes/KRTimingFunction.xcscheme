@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6101AB6836C37B28894E0DD4'
+               BlueprintIdentifier = '97A563B9DFFE6A0527C94739'
                BlueprintName = 'KRTimingFunction'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'KRTimingFunction.framework'>
