@@ -129,9 +129,10 @@ public struct TimingFunction {
         return c * rt*rt*((s+1) * rt - s) + b
     }
     public static func EaseOutBack(rt: Double, b: Double, c: Double) -> Double {
-        var rt = rt
+        let rt = rt - 1
         let s = 1.70158
-        return c * ((rt-=1)*rt*((s+1) * rt + s) + 1) + b
+        let ex1 = (s+1) * rt + s
+        return c * (rt * rt * ex1 + 1) + b
     }
     public static func EaseInOutBack(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
