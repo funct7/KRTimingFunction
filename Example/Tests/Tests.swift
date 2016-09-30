@@ -15,7 +15,7 @@ class Tests: XCTestCase {
     }
     
     func testExample() {
-        let date = NSDate()
+        let date = Date()
         for i in 0 ..< 10 {
             let param = (12.0+Double(i), 73.0+Double(i), 0.0, 1.0)
             let functions: [TimingFunction] = [
@@ -62,12 +62,12 @@ class Tests: XCTestCase {
                 ]
             TimingFunction.evaluate(f)
         }
-        print(NSDate().timeIntervalSinceDate(date))
+        print(Date().timeIntervalSince(date))
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measure() {
             // Put the code you want to measure the time of here.
         }
     }
