@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03B29D3B1DDEDA72004EEBE6 /* KRTimingFunction+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B29D3A1DDEDA72004EEBE6 /* KRTimingFunction+CGFloat.swift */; };
+		03B29D3D1DDEE1A8004EEBE6 /* KRTimingFunction+Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B29D3C1DDEE1A8004EEBE6 /* KRTimingFunction+Float.swift */; };
 		23EB67B8D997C121D618437732C2B789 /* KRTimingFunction-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DC5B0FFF2842CF67E711A45ED8E7C8 /* KRTimingFunction-dummy.m */; };
 		5408AC1CB3050F5DBA753B2BDC48707A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		A3544B84A6F61E0AF9DBD3CCA8131921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		00049B01A13AF11BE9C7C812E73ABADC /* Pods-KRTimingFunction_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KRTimingFunction_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0312F9690494478D3DCCEB1550FE17A8 /* Pods-KRTimingFunction_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KRTimingFunction_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		03B29D3A1DDEDA72004EEBE6 /* KRTimingFunction+CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KRTimingFunction+CGFloat.swift"; sourceTree = "<group>"; };
+		03B29D3C1DDEE1A8004EEBE6 /* KRTimingFunction+Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KRTimingFunction+Float.swift"; sourceTree = "<group>"; };
 		105C6AE15DEEB5450D99AEE6AD605FF3 /* KRTimingFunction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KRTimingFunction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		135271EA02278D1BF2D88BC452B88FCC /* Pods-KRTimingFunction_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KRTimingFunction_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1AC66ECEE410FD6B2FE3A4E79BD99792 /* KRTimingFunction.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KRTimingFunction.modulemap; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE934983555241F14D5C8D75945EC09 /* KRTimingFunction.swift */,
+				03B29D3A1DDEDA72004EEBE6 /* KRTimingFunction+CGFloat.swift */,
+				03B29D3C1DDEE1A8004EEBE6 /* KRTimingFunction+Float.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -279,6 +285,8 @@
 			files = (
 				23EB67B8D997C121D618437732C2B789 /* KRTimingFunction-dummy.m in Sources */,
 				B6A37A428E971AA0E49497ECB38BC51B /* KRTimingFunction.swift in Sources */,
+				03B29D3B1DDEDA72004EEBE6 /* KRTimingFunction+CGFloat.swift in Sources */,
+				03B29D3D1DDEE1A8004EEBE6 /* KRTimingFunction+Float.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

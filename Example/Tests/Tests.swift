@@ -20,45 +20,45 @@ class Tests: XCTestCase {
             let param = (12.0+Double(i), 73.0+Double(i), 0.0, 1.0)
             let functions: [TimingFunction] = [
                 //        .Linear(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInQuad(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutQuad(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutQuad(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInQuad(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutQuad(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutQuad(rt: param.0 / param.1, b: param.2, c: param.3),
                 
-                .EaseInCubic(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutCubic(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutCubic(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInCubic(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutCubic(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutCubic(rt: param.0 / param.1, b: param.2, c: param.3),
                 
-                .EaseInQuart(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutQuart(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutQuart(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInQuart(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutQuart(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutQuart(rt: param.0 / param.1, b: param.2, c: param.3),
                 // Quint
-                .EaseInQuint(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutQuint(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutQuint(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInQuint(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutQuint(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutQuint(rt: param.0 / param.1, b: param.2, c: param.3),
                 // Sine
-                .EaseInSine(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutSine(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutSine(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInSine(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutSine(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutSine(rt: param.0 / param.1, b: param.2, c: param.3),
                 // Expo
-                .EaseInExpo(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutExpo(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutExpo(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInExpo(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutExpo(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutExpo(rt: param.0 / param.1, b: param.2, c: param.3),
                 // Circ
-                .EaseInCirc(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutCirc(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutCirc(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInCirc(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutCirc(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutCirc(rt: param.0 / param.1, b: param.2, c: param.3),
                 // Elastic
-                .EaseInElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
-                .EaseOutElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
-                .EaseInOutElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
+                .easeInElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
+                .easeOutElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
+                .easeInOutElastic(rt: param.0 / param.1, b: param.2, c: param.3, d: param.1),
                 // Back
-                .EaseInBack(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutBack(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutBack(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInBack(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutBack(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutBack(rt: param.0 / param.1, b: param.2, c: param.3),
                 // Bounce
-                .EaseInBounce(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseOutBounce(rt: param.0 / param.1, b: param.2, c: param.3),
-                .EaseInOutBounce(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInBounce(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeOutBounce(rt: param.0 / param.1, b: param.2, c: param.3),
+                .easeInOutBounce(rt: param.0 / param.1, b: param.2, c: param.3),
                 ]
             TimingFunction.evaluate(f)
         }
