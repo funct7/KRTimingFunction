@@ -80,6 +80,8 @@ public enum TimingCurve {
 
 
 public extension TimingCurve {
+    
+    @available(iOS, deprecated: 5)
     static func value(using function: TimingCurve, rt: Double, b: Double, c: Double, d: Double? = nil) -> Double {
         switch function {
         case .linear:           return linear(rt: rt, b: b, c: c)
