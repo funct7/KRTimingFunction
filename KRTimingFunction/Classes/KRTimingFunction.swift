@@ -80,7 +80,7 @@ public enum TimingCurve {
 
 
 public extension TimingCurve {
-    public static func value(using function: TimingCurve, rt: Double, b: Double, c: Double, d: Double? = nil) -> Double {
+    static func value(using function: TimingCurve, rt: Double, b: Double, c: Double, d: Double? = nil) -> Double {
         switch function {
         case .linear:           return linear(rt: rt, b: b, c: c)
             
@@ -126,81 +126,81 @@ public extension TimingCurve {
         }
     }
     
-    public static func linear(rt: Double, b: Double, c: Double) -> Double {
+    static func linear(rt: Double, b: Double, c: Double) -> Double {
         return c * rt + b
     }
     // Sine
-    public static func easeInSine(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInSine(rt: Double, b: Double, c: Double) -> Double {
         return -c * cos(rt * (Double.pi/2.0)) + c + b
     }
-    public static func easeOutSine(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutSine(rt: Double, b: Double, c: Double) -> Double {
         return c * sin(rt * (Double.pi/2.0)) + b
     }
-    public static func easeInOutSine(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutSine(rt: Double, b: Double, c: Double) -> Double {
         return -c/2 * (cos(Double.pi*rt) - 1) + b
     }
     // Quad
-    public static func easeInQuad(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInQuad(rt: Double, b: Double, c: Double) -> Double {
         return c * rt*rt + b
     }
     
-    public static func easeOutQuad(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutQuad(rt: Double, b: Double, c: Double) -> Double {
         return -c * rt*(rt-2) + b
     }
     
-    public static func easeInOutQuad(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutQuad(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         if (rt*=2.0) < 1 { return c/2 * rt*rt + b }
         return -c/2 * ((rt-=1.0)*(rt-2) - 1) + b
     }
     
     // Cubic
-    public static func easeInCubic(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInCubic(rt: Double, b: Double, c: Double) -> Double {
         return c * rt*rt*rt + b
     }
-    public static func easeOutCubic(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutCubic(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         return c*((rt-=1)*rt*rt + 1) + b
     }
-    public static func easeInOutCubic(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutCubic(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         if (rt*=2.0) < 1 { return c/2 * rt*rt*rt + b }
         return c/2 * ((rt-=2)*rt*rt + 2) + b
     }
     // Quart
-    public static func easeInQuart(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInQuart(rt: Double, b: Double, c: Double) -> Double {
         return c * rt*rt*rt*rt + b
     }
-    public static func easeOutQuart(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutQuart(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         return -c * ((rt-=1)*rt*rt*rt - 1) + b
     }
-    public static func easeInOutQuart(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutQuart(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         if (rt*=2.0) < 1 { return c/2*rt*rt*rt*rt + b }
         return -c/2 * ((rt-=2)*rt*rt*rt - 2) + b
     }
     // Quint
-    public static func easeInQuint(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInQuint(rt: Double, b: Double, c: Double) -> Double {
         return c * rt*rt*rt*rt*rt + b
     }
-    public static func easeOutQuint(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutQuint(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         return c * ((rt-=1)*rt*rt*rt*rt + 1) + b
     }
-    public static func easeInOutQuint(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutQuint(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         if (rt*=2.0) < 1 { return c/2 * rt*rt*rt*rt*rt + b }
         return c/2 * ((rt-=2)*rt*rt*rt*rt + 2) + b
     }
     // Expo
-    public static func easeInExpo(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInExpo(rt: Double, b: Double, c: Double) -> Double {
         return rt == 0.0 ? b : c * pow(2, 10 * (rt - 1)) + b
     }
-    public static func easeOutExpo(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutExpo(rt: Double, b: Double, c: Double) -> Double {
         return rt == 1.0 ? b+c : c * (-pow(2, -10 * rt) + 1) + b
     }
-    public static func easeInOutExpo(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutExpo(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         if rt == 0.0 { return b }
         if rt == 1.0 { return b+c }
@@ -208,37 +208,37 @@ public extension TimingCurve {
         return c/2 * (-pow(2, -10 * (rt-=1)) + 2) + b
     }
     // Circ
-    public static func easeInCirc(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInCirc(rt: Double, b: Double, c: Double) -> Double {
         return -c * (sqrt(1 - rt*rt) - 1) + b
     }
-    public static func easeOutCirc(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutCirc(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         return c * sqrt(1 - (rt-=1)*rt) + b
     }
-    public static func easeInOutCirc(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutCirc(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         if (rt*=2.0) < 1 { return -c/2 * (sqrt(1 - rt*rt) - 1) + b }
         return c/2 * (sqrt(1 - (rt-=2)*rt) + 1) + b
     }
     // Back
-    public static func easeInBack(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInBack(rt: Double, b: Double, c: Double) -> Double {
         let s = 1.70158
         return c * rt*rt*((s+1) * rt - s) + b
     }
-    public static func easeOutBack(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutBack(rt: Double, b: Double, c: Double) -> Double {
         let rt = rt - 1
         let s = 1.70158
         let ex1 = (s+1) * rt + s
         return c * (rt * rt * ex1 + 1) + b
     }
-    public static func easeInOutBack(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutBack(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         var s = 1.70158 * 1.525
         if ((rt*=2.0) < 1) { return c/2 * (rt*rt*((s+1)*rt - s)) + b }
         return c/2 * ((rt-=2)*rt*(((s*=1.525)+1)*rt + s) + 2) + b
     }
     // Elastic
-    public static func easeInElastic(rt: Double, b: Double, c: Double, d: Double) -> Double {
+    static func easeInElastic(rt: Double, b: Double, c: Double, d: Double) -> Double {
         var rt = rt
         var s = 1.70158
         let p = d * 0.3
@@ -249,7 +249,7 @@ public extension TimingCurve {
         else          { s = p / (2*Double.pi) * asin(c/a) }
         return -(a * pow(2, 10 * (rt-=1)) * sin((rt*d-s) * (2*Double.pi) / p)) + b
     }
-    public static func easeOutElastic(rt: Double, b: Double, c: Double, d: Double) -> Double {
+    static func easeOutElastic(rt: Double, b: Double, c: Double, d: Double) -> Double {
         var s = 1.70158
         let p = d * 0.3
         var a = c
@@ -259,7 +259,7 @@ public extension TimingCurve {
         else          { s = p / (2*Double.pi) * asin(c/a) }
         return a * pow(2,-10 * rt) * sin((rt*d-s) * (2*Double.pi) / p) + c + b
     }
-    public static func easeInOutElastic(rt: Double, b: Double, c: Double, d: Double) -> Double {
+    static func easeInOutElastic(rt: Double, b: Double, c: Double, d: Double) -> Double {
         var rt = rt
         var s = 1.70158
         let p = d * 0.45
@@ -272,10 +272,10 @@ public extension TimingCurve {
         return a * pow(2,-10 * (rt-=1)) * sin((rt*d-s) * (2*Double.pi) / p) * 0.5 + c + b
     }
     // Bounce
-    public static func easeInBounce(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInBounce(rt: Double, b: Double, c: Double) -> Double {
         return c - easeOutBounce(rt: 1.0-rt, b: 0, c: c) + b
     }
-    public static func easeOutBounce(rt: Double, b: Double, c: Double) -> Double {
+    static func easeOutBounce(rt: Double, b: Double, c: Double) -> Double {
         var rt = rt
         if rt < 1/2.75 {
             return c * (7.5625*rt*rt) + b
@@ -287,7 +287,7 @@ public extension TimingCurve {
             return c * (7.5625*(rt-=(2.625/2.75))*rt + 0.984375) + b
         }
     }
-    public static func easeInOutBounce(rt: Double, b: Double, c: Double) -> Double {
+    static func easeInOutBounce(rt: Double, b: Double, c: Double) -> Double {
         if rt < 0.5 { return easeInBounce(rt: rt*2, b: 0, c: c) * 0.5 + b }
         return easeOutBounce(rt: rt*2 - 1, b: 0, c: c) * 0.5 + c*0.5 + b
     }
