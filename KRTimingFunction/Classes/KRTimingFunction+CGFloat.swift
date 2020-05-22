@@ -8,50 +8,50 @@
 
 import Foundation
 
-public extension TimingFunction {
-    public static func value(using function: FunctionType, rt: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat? = nil) -> CGFloat {
+public extension TimingCurve {
+    public static func value(using function: TimingCurve, rt: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat? = nil) -> CGFloat {
         switch function {
-        case .linear:           return TimingFunction.linear(rt: rt, b: b, c: c)
+        case .linear:           return linear(rt: rt, b: b, c: c)
             
-        case .easeInSine:       return TimingFunction.easeInSine(rt: rt, b: b, c: c)
-        case .easeOutSine:      return TimingFunction.easeOutSine(rt: rt, b: b, c: c)
-        case .easeInOutSine:    return TimingFunction.easeInOutSine(rt: rt, b: b, c: c)
+        case .easeInSine:       return easeInSine(rt: rt, b: b, c: c)
+        case .easeOutSine:      return easeOutSine(rt: rt, b: b, c: c)
+        case .easeInOutSine:    return easeInOutSine(rt: rt, b: b, c: c)
             
-        case .easeInQuad:       return TimingFunction.easeInQuad(rt: rt, b: b, c: c)
-        case .easeOutQuad:      return TimingFunction.easeOutQuad(rt: rt, b: b, c: c)
-        case .easeInOutQuad:    return TimingFunction.easeInOutQuad(rt: rt, b: b, c: c)
+        case .easeInQuad:       return easeInQuad(rt: rt, b: b, c: c)
+        case .easeOutQuad:      return easeOutQuad(rt: rt, b: b, c: c)
+        case .easeInOutQuad:    return easeInOutQuad(rt: rt, b: b, c: c)
             
-        case .easeInCubic:      return TimingFunction.easeInCubic(rt: rt, b: b, c: c)
-        case .easeOutCubic:     return TimingFunction.easeOutCubic(rt: rt, b: b, c: c)
-        case .easeInOutCubic:   return TimingFunction.easeInOutCubic(rt: rt, b: b, c: c)
+        case .easeInCubic:      return easeInCubic(rt: rt, b: b, c: c)
+        case .easeOutCubic:     return easeOutCubic(rt: rt, b: b, c: c)
+        case .easeInOutCubic:   return easeInOutCubic(rt: rt, b: b, c: c)
             
-        case .easeInQuart:      return TimingFunction.easeInQuart(rt: rt, b: b, c: c)
-        case .easeOutQuart:     return TimingFunction.easeOutQuart(rt: rt, b: b, c: c)
-        case .easeInOutQuart:   return TimingFunction.easeInOutQuart(rt: rt, b: b, c: c)
+        case .easeInQuart:      return easeInQuart(rt: rt, b: b, c: c)
+        case .easeOutQuart:     return easeOutQuart(rt: rt, b: b, c: c)
+        case .easeInOutQuart:   return easeInOutQuart(rt: rt, b: b, c: c)
             
-        case .easeInQuint:      return TimingFunction.easeInQuint(rt: rt, b: b, c: c)
-        case .easeOutQuint:     return TimingFunction.easeOutQuint(rt: rt, b: b, c: c)
-        case .easeInOutQuint:   return TimingFunction.easeInOutQuint(rt: rt, b: b, c: c)
+        case .easeInQuint:      return easeInQuint(rt: rt, b: b, c: c)
+        case .easeOutQuint:     return easeOutQuint(rt: rt, b: b, c: c)
+        case .easeInOutQuint:   return easeInOutQuint(rt: rt, b: b, c: c)
             
-        case .easeInExpo:       return TimingFunction.easeInExpo(rt: rt, b: b, c: c)
-        case .easeOutExpo:      return TimingFunction.easeOutExpo(rt: rt, b: b, c: c)
-        case .easeInOutExpo:    return TimingFunction.easeInOutExpo(rt: rt, b: b, c: c)
+        case .easeInExpo:       return easeInExpo(rt: rt, b: b, c: c)
+        case .easeOutExpo:      return easeOutExpo(rt: rt, b: b, c: c)
+        case .easeInOutExpo:    return easeInOutExpo(rt: rt, b: b, c: c)
             
-        case .easeInCirc:       return TimingFunction.easeInCirc(rt: rt, b: b, c: c)
-        case .easeOutCirc:      return TimingFunction.easeOutCirc(rt: rt, b: b, c: c)
-        case .easeInOutCirc:    return TimingFunction.easeInOutCirc(rt: rt, b: b, c: c)
+        case .easeInCirc:       return easeInCirc(rt: rt, b: b, c: c)
+        case .easeOutCirc:      return easeOutCirc(rt: rt, b: b, c: c)
+        case .easeInOutCirc:    return easeInOutCirc(rt: rt, b: b, c: c)
             
-        case .easeInBack:       return TimingFunction.easeInBack(rt: rt, b: b, c: c)
-        case .easeOutBack:      return TimingFunction.easeOutBack(rt: rt, b: b, c: c)
-        case .easeInOutBack:    return TimingFunction.easeInOutBack(rt: rt, b: b, c: c)
+        case .easeInBack:       return easeInBack(rt: rt, b: b, c: c)
+        case .easeOutBack:      return easeOutBack(rt: rt, b: b, c: c)
+        case .easeInOutBack:    return easeInOutBack(rt: rt, b: b, c: c)
             
-        case .easeInElastic:    return TimingFunction.easeInElastic(rt: rt, b: b, c: c, d: d!)
-        case .easeOutElastic:   return TimingFunction.easeOutElastic(rt: rt, b: b, c: c, d: d!)
-        case .easeInOutElastic: return TimingFunction.easeInOutElastic(rt: rt, b: b, c: c, d: d!)
+        case .easeInElastic:    return easeInElastic(rt: rt, b: b, c: c, d: d!)
+        case .easeOutElastic:   return easeOutElastic(rt: rt, b: b, c: c, d: d!)
+        case .easeInOutElastic: return easeInOutElastic(rt: rt, b: b, c: c, d: d!)
             
-        case .easeInBounce:     return TimingFunction.easeInBounce(rt: rt, b: b, c: c)
-        case .easeOutBounce:    return TimingFunction.easeOutBounce(rt: rt, b: b, c: c)
-        case .easeInOutBounce:  return TimingFunction.easeInOutBounce(rt: rt, b: b, c: c)
+        case .easeInBounce:     return easeInBounce(rt: rt, b: b, c: c)
+        case .easeOutBounce:    return easeOutBounce(rt: rt, b: b, c: c)
+        case .easeInOutBounce:  return easeInOutBounce(rt: rt, b: b, c: c)
         }
     }
     
@@ -202,7 +202,7 @@ public extension TimingFunction {
     }
     // Bounce
     public static func easeInBounce(rt: CGFloat, b: CGFloat, c: CGFloat) -> CGFloat {
-        return c - TimingFunction.easeOutBounce(rt: 1.0-rt, b: 0, c: c) + b
+        return c - easeOutBounce(rt: 1.0-rt, b: 0, c: c) + b
     }
     public static func easeOutBounce(rt: CGFloat, b: CGFloat, c: CGFloat) -> CGFloat {
         var rt = rt
@@ -217,7 +217,7 @@ public extension TimingFunction {
         }
     }
     public static func easeInOutBounce(rt: CGFloat, b: CGFloat, c: CGFloat) -> CGFloat {
-        if rt < 0.5 { return TimingFunction.easeInBounce(rt: rt*2, b: 0, c: c) * 0.5 + b }
-        return TimingFunction.easeOutBounce(rt: rt*2 - 1, b: 0, c: c) * 0.5 + c*0.5 + b
+        if rt < 0.5 { return easeInBounce(rt: rt*2, b: 0, c: c) * 0.5 + b }
+        return easeOutBounce(rt: rt*2 - 1, b: 0, c: c) * 0.5 + c*0.5 + b
     }
 }
