@@ -12,7 +12,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A7C601E8AC3337D3C831BD1 /* KRTimingFunction.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KRTimingFunction.podspec; path = ../KRTimingFunction.podspec; sourceTree = "<group>"; };
+		2A7C601E8AC3337D3C831BD1 /* KRTimingFunction.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KRTimingFunction.podspec; path = ../KRTimingFunction.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2EE2C14F9328B80167FC78CE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		42EBC9962CC3E1BF0A5304B8 /* Pods-KRTimingFunction_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRTimingFunction_Tests.release.xcconfig"; path = "Target Support Files/Pods-KRTimingFunction_Tests/Pods-KRTimingFunction_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* KRTimingFunction_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KRTimingFunction_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,6 @@
 				716AA5FEA09442BB46C0D458 /* Pods-KRTimingFunction_Tests.debug.xcconfig */,
 				42EBC9962CC3E1BF0A5304B8 /* Pods-KRTimingFunction_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -145,6 +144,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

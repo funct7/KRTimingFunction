@@ -31,7 +31,7 @@ Original code: http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'KRTimingFunction/Classes/**/*'
+  s.source_files = 'KRTimingFunction/**/*.swift'
   s.swift_version = '5.0'
   
   # s.resource_bundles = {
