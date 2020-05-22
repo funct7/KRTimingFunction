@@ -8,16 +8,6 @@
 
 import Foundation
 
-fileprivate func -= (lhs: inout Double, rhs: Double) -> Double {
-    lhs = lhs - rhs
-    return lhs
-}
-
-fileprivate func *= (lhs: inout Double, rhs: Double) -> Double {
-    lhs = lhs * rhs
-    return lhs
-}
-
 public enum FunctionType {
     case linear
     

@@ -8,16 +8,6 @@
 
 import Foundation
 
-fileprivate func -= (lhs: inout CGFloat, rhs: CGFloat) -> CGFloat {
-    lhs = lhs - rhs
-    return lhs
-}
-
-fileprivate func *= (lhs: inout CGFloat, rhs: CGFloat) -> CGFloat {
-    lhs = lhs * rhs
-    return lhs
-}
-
 public extension TimingFunction {
     public static func value(using function: FunctionType, rt: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat? = nil) -> CGFloat {
         switch function {

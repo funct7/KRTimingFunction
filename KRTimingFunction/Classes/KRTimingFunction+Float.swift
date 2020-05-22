@@ -8,16 +8,6 @@
 
 import Foundation
 
-fileprivate func -= (lhs: inout Float, rhs: Float) -> Float {
-    lhs = lhs - rhs
-    return lhs
-}
-
-fileprivate func *= (lhs: inout Float, rhs: Float) -> Float {
-    lhs = lhs * rhs
-    return lhs
-}
-
 public extension TimingFunction {
     public static func value(using function: FunctionType, rt: Float, b: Float, c: Float, d: Float? = nil) -> Float {
         switch function {
