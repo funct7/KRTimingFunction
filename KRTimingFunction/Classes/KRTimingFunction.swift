@@ -8,7 +8,8 @@
 
 import Foundation
 
-public enum TimingCurve {
+@available(*, deprecated)
+public enum TimingFunction {
     case linear
     
     case easeInSine
@@ -51,7 +52,7 @@ public enum TimingCurve {
     case easeOutBounce
     case easeInOutBounce
     
-    public var inverse: TimingCurve {
+    public var inverse: TimingFunction {
         switch self {
         case .easeInSine:     return .easeOutSine
         case .easeOutSine:    return .easeInSine
@@ -79,10 +80,9 @@ public enum TimingCurve {
 }
 
 
-public extension TimingCurve {
+public extension TimingFunction {
     
-    @available(*, deprecated)
-    static func value(using function: TimingCurve, rt: Double, b: Double, c: Double, d: Double? = nil) -> Double {
+    static func value(using function: TimingFunction, rt: Double, b: Double, c: Double, d: Double? = nil) -> Double {
         switch function {
         case .linear:           return linear(rt: rt, b: b, c: c)
             

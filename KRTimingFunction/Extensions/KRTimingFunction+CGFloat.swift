@@ -8,10 +8,10 @@
 
 import Foundation
 
-public extension TimingCurve {
+public extension TimingFunction {
     
     @available(*, deprecated)
-    static func value(using function: TimingCurve, rt: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat? = nil) -> CGFloat {
+    static func value(using function: TimingFunction, rt: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat? = nil) -> CGFloat {
         if let d = d {
             return CGFloat(value(using: function, rt: Double(rt), b: Double(b), c: Double(c), d: Double(d)))
         } else {
